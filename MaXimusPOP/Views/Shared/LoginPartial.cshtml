@@ -1,0 +1,11 @@
+﻿@using MaXimusPOP.Tools
+
+@if (SessionManager.Instance.IsAuthenticated)
+	{
+		<li>@Html.ActionLink("Logout", "Logout", "User", new { area = "" }, null)</li>
+	}
+	else
+	{
+		<li>@Html.ActionLink("Register", "Register", "Customer", new { area = "" }, null)</li>
+		<li>@Html.ActionLink("Login", "Login", "Customer", new { area = "" }, null)</li>
+	}

@@ -1,0 +1,29 @@
+﻿@model MaXimusPOP.Models.View.Panier
+
+@{
+	ViewBag.Title = "Cart";
+}
+
+<h2>Cart</h2>
+<div class="row">
+	@foreach (var item in Model.Contenu)
+	{
+		<div class="col-md-3 mabellediv">
+			<img src="@Url.Content("~/Content/Images/" + item.Key.Image)"class="maBelleimage">
+			<h3>@item.Key.Name</h3>
+			<p>@item.Key.Description</p>
+			<p>@item.Key.Price €</p>
+			<p>Quantité : @item.Value</p>
+
+		</div>
+
+
+	}
+</div>
+<div class="mabellediv">
+
+	<p>Total : @Model.Total() €</p>
+	<button type="button" class="btn MonBeauButton">Confirm</button>
+	<button type="button" class="btn btn-danger">Cancel</button>
+	
+</div>

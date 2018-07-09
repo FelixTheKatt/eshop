@@ -1,0 +1,89 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.maBelleimage {	
+	border-radius: 50%;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	width: 150px;
+	height: 150px;
+}
+.MonBeauButton {
+	background-color: rgba(42, 71, 99, 0.5) !important;
+	border-radius: 80%;
+	color: white;
+}
+.MonWarningButton {
+	background-color: rgba(127, 31, 20, 0.64) !important;
+	border-radius: 80%;
+	color: white;
+}
+.bluebackground {
+	background-color: rgba(255, 255, 255, 0.20);
+}
+.mabellediv {
+	background-color: rgba(235, 233, 233, 0.85) !important;
+	color: rgba(51, 51, 51, 0.91);
+	min-height:150px;
+}
+.mabellediv2 {
+	background-color: rgba(235, 233, 233, 0.85) !important;
+	color: rgba(51, 51, 51, 0.91);
+	border-style: solid;
+	border-color: rgba(51, 51, 51, 0.91);
+}
+
+html {
+	height: 100%;
+}
+
+.BackGroundBody {
+	background-image: url("Images/slide2.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100%;
+	max-width: 100% !important;
+	/* Center*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: auto;
+}
+.ThumbnailJoli {
+	background-image: url("Images/accueil905-ff319.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	opacity : 0.5;
+}
+
+.Opacite {
+	opacity: 0.5;
+}
+
+.navbar-brand {
+	color: #000;
+}
+
+.navbar-nav > li > a {
+	color: #000;
+}

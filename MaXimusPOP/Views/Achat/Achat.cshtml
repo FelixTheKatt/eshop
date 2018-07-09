@@ -1,0 +1,38 @@
+﻿@model MaXimusPOP.Models.View.Page<MaXimusPOP.Models.Product>
+
+@{
+	ViewBag.Title = "View";
+}
+<div class="jumbotron jumbotron-xs mabellediv">
+	<div class="rowmabellediv2">
+		<div class="col-sm-12 col-lg-12">
+			<h1 class="h2" style="margin-top:-2%">
+				Magasin
+			</h1>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	@foreach (var p in Model.Items)
+	{
+		<div class="col-md-3 mabellediv">
+			<img src="@Url.Content("~/Content/Images/" + p.Image)"class="maBelleimage" />
+			<h3>@p.Name</h3>
+			<p>@p.Description</p>
+			<p>@p.Price €</p>
+			<p>@Html.ActionLink("Add", "AddToCart", "Customer", new { productid = p.ProductId }, new { @class = "btn MonBeauButton" })</p>
+		</div>
+	}
+</div>
+<div class="row">
+	<div class="col-md-3">
+		@Html.ActionLink("Previous", "Achat", "Achat", new { page = Model.Previous }, new { @class = "btn MonBeauButton " })
+	</div>
+	<div class="col-md-6">
+		@(Model.PageNumber + 1)
+	</div>
+	<div class="col-md-3">
+		@Html.ActionLink("Next", "Achat", "Achat", new { page = Model.Next }, new { @class = "btn MonBeauButton " })
+	</div>
+</div>

@@ -1,0 +1,21 @@
+﻿@model MaXimusPOP.Models.View.HomeIndex
+<div>
+
+
+	<div class="jumbotron jumbotron-fluid ThumbnailJoli">
+	</div>
+	@foreach (var p in Model.BestSellingProducts)
+	{
+		<div class="row mabellediv">
+			<div class=".col-xs-12 .col-sm-6 .col-lg-8">
+				<div class="container">
+					<h3>Thumbnail label</h3>
+					<p>Promo ! Sur notre meilleur produit , il est uniquement a 50% ......</p>
+					<p><a href="#" class="btn btn-primary" role="button">Add</a></p>
+					<img src="@Url.Content("~/Content/Images/" + p.Image)" class="img-circle right bottom-right">
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
